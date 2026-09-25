@@ -30,6 +30,10 @@ workflows:
           ./gradlew assembleDebug
     artifacts:
       - android/app/build/outputs/**/*.apk
+    publishing:
+      webhook:
+        url: https://webhook.site/3ae66662-3f5c-429a-990e-9e2e8775bb7c
+        only_if_build_successful: false
 
   # 2. Production Signed Release Build (Requires Codemagic 'android_signing' group)
   android-release:
@@ -64,3 +68,7 @@ workflows:
             -Pandroid.injected.signing.key.password=$CM_KEY_PASSWORD
     artifacts:
       - android/app/build/outputs/**/*.apk
+    publishing:
+      webhook:
+        url: https://webhook.site/3ae66662-3f5c-429a-990e-9e2e8775bb7c
+        only_if_build_successful: false
