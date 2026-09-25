@@ -1,0 +1,23 @@
+# Dependencies & Build Outputs
+node_modules
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+
+# Editor folders
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Android local cache & outputs
+android/app/build/
+android/.gradle/
+android/local.properties
+
+# Android Keystores (Never commit to Git)
+*.keystore
+*.jks
+*.p12
+keystore_base64.txt
